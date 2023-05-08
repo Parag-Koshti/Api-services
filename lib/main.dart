@@ -27,6 +27,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const home();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white ,
+        title:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text("Flutter",style: TextStyle(color:Colors.blue),),
+            Text("News",style: TextStyle(color: Colors.red),)
+          ],
+        ),
+        elevation: 10,
+      ),
+      body:home(),
+    );
   }
 }
